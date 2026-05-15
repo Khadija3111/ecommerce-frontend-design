@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ecommerce Modernization Project
 
-## Getting Started
+A high-performance, fully responsive ecommerce web application built with **Next.js 15** and **React 19**. 
 
-First, run the development server:
+This project represents a complete architectural transformation, migrating a traditional multi-page static site (HTML/JS/CSS) into a modern, component-based **Single Page Application (SPA)**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+### **1. Core Functionality**
+- **Dynamic Catalog**: Interactive product listing with real-time filtering by category, brand, features, condition, and star rating.
+- **Advanced Search**: Global search functionality in the navbar that provides instant results on the catalog page.
+- **Product Details**: Dynamic routing (`/webdetail?id=...`) that loads comprehensive product information, including deterministic supplier selection and related product recommendations.
+- **Shopping Cart**: Full cart lifecycle management including item addition/removal, "Save for Later" functionality, and automatic calculation of subtotals, taxes, and shipping.
+- **Persistent Wishlist**: A dedicated "Saved Items" section that persists user preferences using `localStorage`.
+
+### **2. Modern Architecture**
+- **Next.js App Router**: Utilizes the latest Next.js 15 routing for optimized performance and SEO.
+- **Component-Based UI**: Highly modular React components (`Navbar`, `Footer`, `Weblist`, etc.) with encapsulated styling.
+- **Client-Side Navigation**: Instant transitions between pages using the Next.js `Link` component and `useRouter` hook, eliminating page reloads.
+
+### **3. Design & Responsiveness**
+- **Pixel-Perfect Desktop View**: Preserves the original high-fidelity design for large screens (1440px+).
+- **Fully Responsive**: Custom-tailored layouts for tablets and mobile devices using CSS Grid, Flexbox, and fluid typography.
+- **Touch-Friendly UI**: Optimized button sizes and interactive elements for mobile users.
+
+## 🛠️ Technology Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Library**: [React 19](https://react.js.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: Standard CSS (within components) & [Tailwind CSS](https://tailwindcss.com/)
+- **Persistence**: Browser `localStorage` API
+
+## 📂 Project Structure (my-app)
+
+```text
+my-app/
+├── app/
+│   ├── components/       # Modular React components (Navbar, Weblist, etc.)
+│   ├── saved/            # Wishlist route
+│   ├── webcart/          # Shopping cart route
+│   ├── webdetail/        # Product detail route
+│   ├── weblist/          # Product catalog route
+│   ├── globals.css       # Global styles and Tailwind imports
+│   ├── layout.tsx        # Root layout with Navbar/Footer integration
+│   └── page.tsx          # Home page content
+├── public/               # Static assets (images, logos, svgs)
+├── package.json          # Dependencies and scripts
+└── tsconfig.json         # TypeScript configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚦 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **1. Prerequisites**
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **2. Installation**
+Navigate to the project directory and install the dependencies:
+```bash
+cd my-app
+npm install
+```
 
-## Learn More
+### **3. Run Development Server**
+Start the application in development mode:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 Modernization Summary
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The migration process involved:
+1. **Component Extraction**: Breaking down monolithic HTML files into reusable React components.
+2. **Logic Migration**: Porting imperative JavaScript (DOM manipulation) into declarative React state management (`useState`, `useMemo`, `useEffect`).
+3. **Routing Setup**: Implementing a clean, dynamic URL structure using Next.js file-based routing.
+4. **Asset Optimization**: Moving all static images to the `public/` directory and updating paths for optimized loading.
+5. **Responsive Overhaul**: Adding comprehensive media queries to ensure a seamless experience on all device types.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Created as part of the Ecommerce App Modernization effort.*
