@@ -242,7 +242,7 @@ const WeblistContent = () => {
         .list-product { background: #fff; border: 1px solid #dee2e7; border-radius: 6px; padding: 16px; display: flex; flex-direction: column; position: relative; }
         .products-list .list-product { flex-direction: row; gap: 20px; }
         .product-thumb { display: block; border-radius: 6px; padding: 10px; text-align: center; }
-        .product-thumb img { max-width: 100%; height: 180px; object-fit: contain; }
+        .product-thumb img { max-width: 100%; height: 180px; object-fit: contain; display: block; margin: 0 auto; }
         .products-list .product-thumb img { width: 180px; height: 180px; }
         .wish { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border: 1px solid #dee2e7; border-radius: 6px; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #8b96a5; }
         .wish.is-saved { color: #e31b23; border-color: #f5b5ba; background: #fff5f6; }

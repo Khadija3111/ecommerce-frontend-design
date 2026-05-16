@@ -243,6 +243,8 @@ export default function Home() {
           width: 95px;
           height: 95px;
           object-fit: cover;
+          display: block;
+          margin: 0 auto;
         }
 
         .deal-items p {
