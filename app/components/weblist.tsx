@@ -413,7 +413,7 @@ const WeblistContent = () => {
                     <button className={`wish ${savedItems.includes(p.id) ? 'is-saved' : ''}`} onClick={() => toggleSave(p.id)}>
                       <svg width="18" height="18" viewBox="0 0 24 24" fill={savedItems.includes(p.id) ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
                     </button>
-                    <Link href={`/webdetail?id=${p.id}`} className="product-thumb">
+                    <Link href={"/webdetail?id=" + p.id} className="product-thumb">
                       <img src={"/" + p.img} alt={p.title} />
                     </Link>
                     <div className="body">
@@ -425,7 +425,7 @@ const WeblistContent = () => {
                       </div>
                       <p className="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                       <div className="actions">
-                        <Link href={`/webdetail?id=${p.id}`} className="view-detail">View detail</Link>
+                        <Link href={"/webdetail?id=" + p.id} className="view-detail">View detail</Link>
                         <button className="add-to-cart" onClick={() => addToCart(p.id)}>Add</button>
                       </div>
                     </div>

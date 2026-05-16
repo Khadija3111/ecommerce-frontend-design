@@ -257,7 +257,7 @@ const Webdetail = () => {
             <h2>Related products</h2>
             <div className="related-grid">
               {relatedProducts.map(rp => (
-                <Link key={rp.id} href={`/webdetail?id=${rp.id}`} className="related-card" onClick={() => {
+                <Link key={rp.id} href={"/webdetail?id=" + rp.id} className="related-card" onClick={() => {
                   setProduct(rp);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}>

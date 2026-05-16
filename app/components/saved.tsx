@@ -75,11 +75,11 @@ const Saved = () => {
             <div className="saved-grid">
               {savedProducts.map(p => (
                 <article key={p.id} className="saved-card">
-                  <Link href={`/webdetail?id=${p.id}`}>
+                  <Link href={"/webdetail?id=" + p.id}>
                     <img src={p.img} alt={p.title} />
                   </Link>
                   <div className="saved-body">
-                    <Link className="saved-title" href={`/webdetail?id=${p.id}`}>
+                    <Link className="saved-title" href={"/webdetail?id=" + p.id}>
                       {p.title}
                     </Link>
                     <div className="saved-price">${p.price.toFixed(2)}</div>

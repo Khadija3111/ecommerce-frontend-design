@@ -170,11 +170,11 @@ const Webcart = () => {
                   return (
                     <div key={item.id} className="cart-item">
                       <div className="cart-qty">{item.qty}</div>
-                      <Link className="cart-thumb" href={`/webdetail?id=${p.id}`}>
+                      <Link className="cart-thumb" href={"/webdetail?id=" + p.id}>
                         <img src={p.img} alt={p.title} />
                       </Link>
                       <div className="cart-body">
-                        <h4><Link href={`/webdetail?id=${p.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>{p.title}</Link></h4>
+                        <h4><Link href={"/webdetail?id=" + p.id} style={{ textDecoration: 'none', color: 'inherit' }}>{p.title}</Link></h4>
                         <p>{p.category}</p>
                         <div className="cart-actions">
                           <button className="cart-action cart-action--primary" onClick={() => moveToLater(item.id)}>Save for later</button>
@@ -222,7 +222,7 @@ const Webcart = () => {
                     if (!p) return null;
                     return (
                       <article key={item.id} className="saved-later-item">
-                        <Link className="saved-later-img-wrap" href={`/webdetail?id=${p.id}`}>
+                        <Link className="saved-later-img-wrap" href={"/webdetail?id=" + p.id}>
                           <img src={p.img} alt={p.title} />
                         </Link>
                         <p className="saved-later-price">${p.price.toFixed(2)}</p>
